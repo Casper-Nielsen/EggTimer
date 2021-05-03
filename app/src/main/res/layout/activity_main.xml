@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="vælg æg"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTopText"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopText" />
+
+   <!-- <Button
+        android:id="@+id/softBoiledButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="blød kogte"
+        android:onClick="onButtonEggSelectedClicked"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopButtens" /> -->
+
+<!--    <Button
+        android:id="@+id/mediumBoiledButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="smilende"
+        android:onClick="onButtonEggSelectedClicked"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopButtens" /> -->
+
+<!--    <Button
+        android:id="@+id/hardBoiledButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="hård kogte"
+        android:onClick="onButtonEggSelectedClicked"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopButtens" /> -->
+
+
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="timer mm:ss"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineCenterH"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="00:00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@+id/guidelineCenterH" />
+
+
+    <Button
+        android:enabled="false"
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:onClick="onButtonStartClicked"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottemButten"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBottemButten"/>
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:onClick="onButtonStopClicked"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottemButten"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBottemButten"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTopText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTopButtens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottemButten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <ImageView
+        android:id="@+id/softBoiledButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onButtonEggSelectedClicked"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTopButtens"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopButtens"
+        app:srcCompat="@drawable/ic_soft" />
+
+    <ImageView
+        android:id="@+id/mediumBoiledButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onButtonEggSelectedClicked"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTopButtens"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopButtens"
+        app:srcCompat="@drawable/ic_medium" />
+
+    <ImageView
+        android:id="@+id/hardBoiledButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="onButtonEggSelectedClicked"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTopButtens"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopButtens"
+        app:srcCompat="@drawable/ic_hard" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
