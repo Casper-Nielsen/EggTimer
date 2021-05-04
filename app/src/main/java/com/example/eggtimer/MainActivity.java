@@ -8,6 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * Activity for loading layout resources
+ *
+ * This activity is used to display the egg timer layout
+ *
+ * @author CKN
+ * @version 1.2
+ * @since 1.0
+ */
 public class MainActivity extends AppCompatActivity implements EggTimerPresenter.View {
     private int mins;
     private EggTimerPresenter presenter;
@@ -18,6 +27,13 @@ public class MainActivity extends AppCompatActivity implements EggTimerPresenter
         setContentView(R.layout.activity_main);
         presenter = new EggTimerPresenter(this);
     }
+
+    /**
+     * Method that is for the button click to set the timer for the selected option
+     *
+     * @version 1.0
+     * @since 1.0
+     */
     public void onButtonEggSelectedClicked(View view) {
         Button startbtn = findViewById(R.id.startButton);
         TextView time = findViewById(R.id.timer);
@@ -41,6 +57,13 @@ public class MainActivity extends AppCompatActivity implements EggTimerPresenter
                 throw new RuntimeException("Unknow button ID");
         }
     }
+
+    /**
+     * Method that is for the button click to start the timer
+     *
+     * @version 1.2
+     * @since 1.0
+     */
     public  void onButtonStartClicked(View view){
         findViewById(R.id.softBoiledButton).setEnabled(false);
         findViewById(R.id.mediumBoiledButton).setEnabled(false);
@@ -50,6 +73,13 @@ public class MainActivity extends AppCompatActivity implements EggTimerPresenter
         presenter.start(mins);
 
     }
+
+    /**
+     * Method that is for the button click to stop the timer
+     *
+     * @version 1.2
+     * @since 1.0
+     */
     public void onButtonStopClicked(View view){
         presenter.stop();
         findViewById(R.id.softBoiledButton).setEnabled(true);
@@ -60,6 +90,13 @@ public class MainActivity extends AppCompatActivity implements EggTimerPresenter
         findViewById(R.id.stopButton).setVisibility(View.INVISIBLE);
     }
 
+    /**
+     * Method that updates the time remaining
+     *
+     * @version 1.2
+     * @since 1.1
+     * @param time the amount of time left in sec
+     */
     @Override
     public void onCountDown(long time) {
         runOnUiThread(new Runnable() {
@@ -70,6 +107,12 @@ public class MainActivity extends AppCompatActivity implements EggTimerPresenter
         });
     }
 
+    /**
+     * Method that shows that the timer have stopped
+     *
+     * @version 1.1
+     * @since 1.1
+     */
     @Override
     public void onEggTimerStopped() {
         runOnUiThread(new Runnable() {
